@@ -1,0 +1,356 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap");
+*{
+    padding: 0;
+    margin: 0px;
+    scroll-behavior: smooth;
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+/* Header Styling */
+header {
+    max-width: 2000px;
+    margin: 1rem 10rem;
+    box-shadow:0 8px 16px rgba(0, 0, 0, 0.2); 
+    border-bottom: 2px solid #5e5f62;
+    border-radius: 10px; 
+}
+
+.header-container {
+    background: #4e76f7;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center; 
+}
+
+header h1 {
+    font-size: 3em;
+    margin: 0;
+    color: #ffffff; 
+    font-family: 'Be Vietnam Pro', sans-serif; 
+    text-transform: uppercase;
+    letter-spacing: 2px; 
+}
+
+header p {
+    font-size: 1.5em;
+    margin: 10px 0 0;
+    font-size: 1.5em;
+    margin: 10px 0 0;
+    color: #f0f0f0; 
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-style: italic; 
+    letter-spacing: 1px; 
+}
+
+/* Intro Section */
+.intro {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+.intro .background-img {
+    width:30%;
+    height: 50vh;
+    padding:30px auto;
+    filter: grayscale(100%);
+    box-shadow: 0 0 10px #000;
+    object-fit: cover;
+    margin-right: 50px;
+    display: inline-block;
+    vertical-align: top;
+    float: left;   
+    
+}
+.intro .background-img:hover{
+    transform: scale(1.03);
+    transition: 0.5s;
+    filter: drop-shadow(0 0 5px #b4acac);
+}
+
+.intro h2 {
+    font-size: 2em;
+    text-align: center; 
+    font-weight:bold;
+}
+
+.intro p {
+    font-size: 1.2em;
+    margin: 5px auto;
+    max-width: 900px;
+    padding:50px;
+}
+
+.intro .moreinfo{
+    background-color: #0d0d0d; 
+    color: #ffffff; 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; 
+    font-size: 1em;
+    cursor: pointer; 
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.intro .moreinfo:hover {
+    background-color: #0036f9; 
+    transform: scale(1.05);
+}
+
+.moreinfo a{
+    text-decoration: none; 
+    color: inherit;
+}
+
+.highlights h2{
+    font-size: 2em;
+    text-align: center; 
+    font-weight:bold; 
+    
+}
+.timeline {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+.timeline h2{
+    font-size: 1.8rem; 
+    color: #000000;
+    font-weight: 600; 
+    margin: 0 0 1rem; 
+    padding-bottom: 0.5rem; 
+    
+}
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background: #000000;
+}
+
+.year {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.year .content {
+    background-color: #fff;
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    position: relative;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.year .content:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.year:nth-child(even) .content {
+    order: 1;
+    margin-left: 55%;
+}
+
+.year:nth-child(odd) .content {
+    margin-right: 55%;
+}
+
+.year .content h2 {
+    margin-top: 0;
+    color: #ff0000;
+    font-size: 1.8rem;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.year .content h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #ac9195;
+    border-radius: 2px;
+}
+
+.year .content p {
+    margin: 1rem 0 0;
+    color: #000000;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.year::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background: #766c61;
+    border: 3px solid #684721;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .year .content {
+        width: 100%;
+        margin: 0;
+    }
+    .timeline::before {
+        left: 20px;
+    }
+    .year::after {
+        left: 20px;
+    }
+}
+
+
+/*Gallary Section*/
+
+.gallary_main{
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 4em;
+    font-weight: bold;
+    color: #333;
+    text-align: center; 
+    margin: 0;
+    padding: 1rem 0;
+    border-bottom: 2px solid var(--bgOrange);
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden; 
+    scroll-snap-type: x mandatory; 
+    padding: 1rem; 
+    gap: 15px;
+}
+
+.gallery {
+    display: flex;
+    align-items: center; 
+    gap: 15px;
+    scroll-snap-type: x mandatory;
+}
+
+.card {
+    flex: 0 0 auto; 
+    width: 300px;
+    height: 500px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    scroll-snap-align: start;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
+    box-shadow: 0 0 20px #000;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    transition: 0.5s;
+    filter: drop-shadow(0 0 10px #000);
+}
+
+.card:hover img {
+    filter: grayscale(0%);
+}
+
+.card figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px;
+    font-weight: bold;
+    width: 80%;
+    height: 15%;
+    font-size: 17px;
+    font-weight: 500;
+    color: #fff;
+    opacity: 0;
+    border-radius: 0 0 10px 10px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+    transition: 0.3s;
+}
+
+.card:hover figcaption {
+    opacity: 1;
+    transform: scale(1.03);
+}
+
+.quote {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 40px 10px;
+    text-align: center;
+    background-color: #5fb8f3;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+}
+
+.quote p {
+    font-size: 1.2em;
+    margin: 0 auto;
+    max-width: 700px;
+    font-weight: 900;
+}
+.quote name{
+    font-weight:bolder;
+    font-size:5rem;
+    float:right;
+} 
+    
+.quote .name p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e60000;
+    margin-top: 10px;
+}
+
+.quote .name p::before {
+    content: "— ";
+    font-size: 24px;
+}
+
+/* Footer */
+footer {
+    background: #4e76f7;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    width:100%;
+}
+
+footer p {
+    margin: 0;   
+}
